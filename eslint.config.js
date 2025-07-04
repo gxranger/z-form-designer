@@ -34,6 +34,13 @@ export default tseslint.config(
           singleQuote: true,
         },
       ],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+          disallowTypeAnnotations: false,
+        },
+      ],
       'sort-imports': 'off',
       'import/order': 'off',
       'simple-import-sort/imports': 'error',

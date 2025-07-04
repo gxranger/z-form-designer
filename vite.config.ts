@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
+import autoprefixer from 'autoprefixer';
 import path, { resolve } from 'path';
 import colors from 'picocolors';
 import { defineConfig, loadEnv } from 'vite';
@@ -43,6 +44,15 @@ export default defineConfig(({ mode }) => {
         },
       },
     ],
+    css: {
+      postcss: {
+        plugins: [
+          autoprefixer({
+            overrideBrowserslist: ['Android 4.1', 'iOS 7.1', 'Chrome > 31', 'ff > 31', 'ie >= 8'],
+          }),
+        ],
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),

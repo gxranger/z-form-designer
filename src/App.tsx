@@ -1,22 +1,27 @@
-// import './App.css';
+import { App as AntdApp, ConfigProvider, type ThemeConfig } from 'antd';
+import zhCN from 'antd/locale/zh_CN';
 
-import { Button, message } from 'antd';
+import DesignerLayout from '@/components/editor/DesignerLayout.tsx';
+
+const themeConfigs: ThemeConfig = {
+  cssVar: true,
+  token: {
+    colorInfo: '#141414',
+    colorPrimary: '#141414', // 主色
+    colorBgContainer: '#ffffff', // 背景色
+    colorText: '#333333', // 文本色
+    colorBorder: '#e5e5e5', // 边框色
+  },
+};
 
 function App() {
-  const [messageApi, contextHolder] = message.useMessage();
-
-  const info = () => {
-    console.log(contextHolder, 'contextHolder');
-    messageApi.info('这是一条提示！');
-  };
   return (
     <>
-      <div className="w-full h-[400px] flex justify-center items-center">
-        {contextHolder}
-        <Button onClick={info} className="!bg-primary" type="primary">
-          Primars Button
-        </Button>
-      </div>
+      <ConfigProvider locale={zhCN} theme={themeConfigs}>
+        <AntdApp>
+          <DesignerLayout />
+        </AntdApp>
+      </ConfigProvider>
     </>
   );
 }
