@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import reactPlugin from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import { rules as importOrderRules } from 'eslint-plugin-import';
@@ -22,6 +23,7 @@ export default tseslint.config(
       'react-refresh': reactRefresh,
       'simple-import-sort': simpleImportSortPlugin,
       prettier: prettierPlugin,
+      react: reactPlugin,
       import: {
         rules: importOrderRules,
       },
@@ -41,6 +43,7 @@ export default tseslint.config(
           disallowTypeAnnotations: false,
         },
       ],
+      'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
       'sort-imports': 'off',
       'import/order': 'off',
       'simple-import-sort/imports': 'error',
