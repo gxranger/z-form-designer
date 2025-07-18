@@ -1,9 +1,20 @@
 import { WidgetsTwotone } from '@ricons/material';
 import { Icon } from '@ricons/utils';
-import { Tooltip } from 'antd';
+import { Button, Tooltip } from 'antd';
+
+import DraggableItem from '@/components/dnd/DraggableItem.tsx';
 
 const WidgetsPanel = () => {
-  return <span>元件列表</span>;
+  return (
+    <div className="border border-red-500 h-[500px]">
+      <DraggableItem id="dsfs" fixed>
+        <p>111</p>
+      </DraggableItem>
+      <DraggableItem id="sdf" fixed>
+        <Button>3443</Button>
+      </DraggableItem>
+    </div>
+  );
 };
 
 const TabsIcon = () => {
