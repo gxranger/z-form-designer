@@ -2,15 +2,15 @@ import { WidgetsTwotone } from '@ricons/material';
 import { Icon } from '@ricons/utils';
 import { Button, Tooltip } from 'antd';
 
-import DraggableItem from '@/components/dnd/DraggableItem.tsx';
+import DraggableItem from '@/components/draggable-item';
 
 const WidgetsPanel = () => {
   return (
-    <div className="border border-red-500 h-[500px]">
-      <DraggableItem id="dsfs" fixed>
-        <p>111</p>
+    <div className="border-b-6 border border-red-500 h-[calc(100dvh-45px)]">
+      <DraggableItem id="dsfs">
+        <Button>3443</Button>
       </DraggableItem>
-      <DraggableItem id="sdf" fixed>
+      <DraggableItem id="sdfgdsg">
         <Button>3443</Button>
       </DraggableItem>
     </div>

@@ -46,6 +46,7 @@ export default tseslint.config(
       'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
       'sort-imports': 'off',
       'import/order': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
