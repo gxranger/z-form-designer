@@ -39,13 +39,13 @@ const Layout = () => {
           <div className="border-b-6 border border-blue-500 w-full h-[calc(100%-45px)]">
             <DesignCanvas />
           </div>
-          <DraggableLayer />
         </Splitter.Panel>
 
         <Splitter.Panel resizable={false} defaultSize={325}>
           属性面板
         </Splitter.Panel>
       </Splitter>
+      <DraggableLayer />
     </DndProvider>
   );
 };

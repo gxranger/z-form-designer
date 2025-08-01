@@ -24,6 +24,7 @@
     "@tailwindcss/vite": "^4.1.10",
     "@tanstack/react-router": "^1.121.0",
     "antd": "^5.26.1",
+    "form-render": "^2.5.4",
     "react": "^19.1.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",

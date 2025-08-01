@@ -15,6 +15,10 @@ const DesignCanvas = React.memo(() => {
       accept: 'box',
       drop(item: ItemType) {
         setBoxes(boxes => [...boxes, item]);
+
+        return {
+          accept: 'box',
+        };
       },
     };
   });
@@ -25,7 +29,11 @@ const DesignCanvas = React.memo(() => {
   return (
     <div ref={ref} className="w-full h-full">
       {boxes.map((item, index) => {
-        return <DraggableItem key={index} id={item.id}></DraggableItem>;
+        return (
+          <DraggableItem key={index} id={item.id}>
+            {item.id}
+          </DraggableItem>
+        );
       })}
     </div>
   );
